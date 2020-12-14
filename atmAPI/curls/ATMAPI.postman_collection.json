@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "b17529f7-4dc9-47c0-9ccd-737151644028",
+		"name": "ATMAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8085/atmAPI/process/gettoken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account_number\": \"100001\",\n\t\"name\": \"chhavi\",\n\t\"unique_pin\": \"0000\"\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/atmAPI/process/gettoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"atmAPI",
+						"process",
+						"gettoken"
+					]
+				},
+				"description": "This rest call will return a token"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"account_number\": \"100001\",\n\t\"name\": \"chhavi\",\n\t\"unique_pin\": \"0000\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/atmAPI/process/gettoken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"atmAPI",
+								"process",
+								"gettoken"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8085/atmAPI/process/CREATE/account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account_number\": \"100001\",\n\t\"name\": \"chhavi\",\n\t\"ac_type\": \"savings\",\n\t\"card_num\": \"83154000\",\n\t\"unique_pin\": \"0000\",\n\t\"balance\": \"1000\"\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/atmAPI/process/CREATE/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"atmAPI",
+						"process",
+						"CREATE",
+						"account"
+					]
+				},
+				"description": "This rest call will create a valid account"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"account_number\": \"100001\",\n\t\"name\": \"chhavi\",\n\t\"ac_type\": \"savings\",\n\t\"card_num\": \"83154000\",\n\t\"unique_pin\": \"0000\",\n\t\"balance\": \"1000\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/atmAPI/process/CREATE/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"atmAPI",
+								"process",
+								"CREATE",
+								"account"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8085/atmAPI/process/withdraw/{token}/{accountno}/{amount}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/atmAPI/process/withdraw/{token}/{accountno}/{amount}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"atmAPI",
+						"process",
+						"withdraw",
+						"{token}",
+						"{accountno}",
+						"{amount}"
+					]
+				},
+				"description": "This rest call will withdraw from a valid account and update the same in the table"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8085/atmAPI/process/withdraw/{token}/{accountno}/{amount}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"atmAPI",
+								"process",
+								"withdraw",
+								"{token}",
+								"{accountno}",
+								"{amount}"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8085/atmAPI/process/deposit/{token}/{accountno}/{amount}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/atmAPI/process/deposit/{token}/{accountno}/{amount}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"atmAPI",
+						"process",
+						"deposit",
+						"{token}",
+						"{accountno}",
+						"{amount}"
+					]
+				},
+				"description": "This rest call will deposit to a valid account and update the same in the table"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8085/atmAPI/process/deposit/{token}/{accountno}/{amount}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"atmAPI",
+								"process",
+								"deposit",
+								"{token}",
+								"{accountno}",
+								"{amount}"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8085/atmAPI/process/checkBalance/{token}/{accountno}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/atmAPI/process/checkBalance/{token}/{accountno}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"atmAPI",
+						"process",
+						"checkBalance",
+						"{token}",
+						"{accountno}"
+					]
+				},
+				"description": "This rest call will check the balance."
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8085/atmAPI/process/checkBalance/{token}/{accountno}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"atmAPI",
+								"process",
+								"checkBalance",
+								"{token}",
+								"{accountno}"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
